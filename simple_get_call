@@ -1,0 +1,20 @@
+# Below you will see a sample get call on a single entity
+# Documentation here: https://hitchhikers.yext.com/docs/managementapis/content/entities/#operation/getEntity
+
+import requests
+import json 
+
+demo_account_api = 'YOUR_API_KEY_HERE'
+
+accountId = ACCOUNT_ID_HERE 
+entityId = ENTITY_ID_HERE
+
+url = f"https://api.yextapis.com/v2/accounts/me/entities/{entityId}?v=20220909&api_key={demo_account_api}"
+
+headers = {
+    "Content-Type": "application/json"
+    }
+
+response = requests.get(url, headers=headers)
+
+response.json()
