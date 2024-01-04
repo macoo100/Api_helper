@@ -1,0 +1,28 @@
+# Below you will see a sample put call on a single entity
+# Documentation here: https://hitchhikers.yext.com/docs/managementapis/content/entities/#operation/updateEntity
+
+import requests
+import json 
+
+demo_account_api = 'YOUR_API_KEY_HERE'
+
+accountId = ACCOUNT_ID_HERE 
+entityId = ENTITY_ID_HERE
+
+url = f"https://api.yextapis.com/v2/accounts/me/entities/{entityId}?v=20220909&api_key={marcus_demo_account_api}"
+
+
+# JSON to update
+update = {
+         "address": {
+            "line2": "cook road",
+         },
+}
+
+headers = {
+    "Content-Type": "application/json"
+}
+
+response = requests.put(url, json=update, headers=headers)
+
+print(response.json())
