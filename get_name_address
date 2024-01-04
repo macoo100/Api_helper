@@ -1,0 +1,35 @@
+# Below you will see a sample list call on a a sub account to get the names and address 1's of all entities in the account, and add these entities to an empty list
+# Documentation here: https://hitchhikers.yext.com/docs/managementapis/content/entities/#operation/updateEntity
+
+import requests
+import json 
+
+demo_account_api = 'YOUR_API_KEY_HERE'
+
+accountId = ACCOUNT_ID_HERE 
+entityId = ENTITY_ID_HERE
+
+url = f"https://api.yextapis.com/v2/accounts/2986711/entities?v=20220909&api_key={demo_account_api}"
+
+headers = {
+    "Content-Type": "application/json"
+}
+
+response = requests.get(url, headers=headers)
+
+empty_list = []
+
+if response.status_code == 200:
+    data = response.json()
+    entities = data['response']['entities']
+
+    for entity in entities:
+        name = entity['name']
+        address = entity['address']['line1']
+
+        
+        empty_list.append(name + " " + address)
+else:
+    print(response.status_code)
+
+empty_list
