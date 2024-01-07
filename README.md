@@ -14,5 +14,7 @@ Welcome to the Api_helper! This repository is dedicated to teaching and demonstr
 Here’s a quick overview of what you’ll find in this repository:
 
 GET Calls: Learn how to retrieve data from individual entities or accounts.
+
 PUT Calls: Understand how to update or modify existing data.
+
 Loops in API Calls: Discover how to use loops for pulling or retrieving data from multiple sub accounts at once.
