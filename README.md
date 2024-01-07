@@ -7,6 +7,7 @@ Welcome to the Api_helper! This repository is dedicated to teaching and demonstr
 **Prerequisites**: Before you begin, ensure you have downloaded your IDE of choice (my examples are in Jupyter Notebook) and have the following libraries installed
 - requests library
 - JSON library
+
 **Configuration**: Make sure you have created an app within your demo account that has access read / write permissions to the entities and locations Management API endpoint
 
 ## Usage
